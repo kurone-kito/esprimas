@@ -1,0 +1,78 @@
+doctype html
+html(lang='en')
+  head
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no, viewport-fit=cover')
+    title
+      | Esprimas
+  body
+    main
+      article
+        h1
+          | Esprimas - Practice for ExpressJS
+        p
+          | API Document
+        hr
+        h2
+          | /
+        p
+          | This document. (HTML format)
+        hr
+        h2
+          | /user
+        p
+          | Add or show users data. (JSON format)
+        h3
+          | method
+        dl
+          dt
+            | GET
+          dd
+            | Output the all users
+          dt
+            | PUT
+          dd
+            | Add a user (Required body)
+        h3
+          | put body
+        dl
+          dt
+            | name
+          dd
+            | required
+          dd
+            | string
+          dd
+            | length &gt;= 1
+          dt
+            | age
+          dd
+            | required
+          dd
+            | integer number (auto parsing from string)
+          dd
+            | &gt;= 18
+        h3
+          | Example
+        h4
+          | Request
+        p
+          | PUT http://localhost:5000/user
+          br
+          | BODY:&nbsp;
+          code
+            | name=Silm+Shady&amp;age=20
+        h4
+          | Result
+        dl
+          dt
+            | Succeeded
+          dd
+            | { "name": "Silm+Shady", "age": 20 }
+          dt
+            | Failed
+          dd
+            | { "status": 422, "message": "age must not be less than 18" }
+        hr
+    footer
+      p
+        | &copy; 2019 kurone-kito
