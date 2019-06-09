@@ -13,4 +13,4 @@ npm install
 npm start
 ```
 
-And so, open http://localhost:5000/
+And then, open http://localhost:5000/
